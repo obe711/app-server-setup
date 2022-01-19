@@ -15,6 +15,7 @@ A tutorial on setting up an app server on a cloud server.
 - [DNS](#dns)
 - [SSL](#ssl)
 - [Nginx](#nginx)
+- [Connect to Mongo DB](#dev-tools)
 
 ## Register Domain
 
@@ -134,6 +135,19 @@ location / {
         proxy_cache_bypass $http_upgrade;
     }
 ```
+
+## Dev Tools
+
+**Mongo DB remote access**\
+To access the Mongo DB instance on the cloud server use SSH and the `-L` flag to forward a local port to the remote server. In this example we will forward our local port `27111` to the remote port `27017`.
+
+```bash
+ssh -L 27111:localhost:27017 forge@<server ip address>
+```
+
+Now you can connect to the cloud server Mongo DB instance from localhost port `27111` or connection string `mongodb://localhost:27111`
+
+---
 
 ## 🔗 Links
 
