@@ -121,6 +121,7 @@ In forge, click on your site in the “Active Sites” table. Click the “SSL�
 
 ## Nginx
 
+[Nginx Reverse Proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#introduction)\
 To proxy to your app server, use the following config:
 
 ```
